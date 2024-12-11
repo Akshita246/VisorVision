@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(185, 238, 238);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Navbar */
+.navbar {
+  height:80px;
+  background-color: #333; /* Dark background for navbar */
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar .logo {
+  color: black;
+  font-size: 24px;
+}
+
+/* Center the logo container on the page */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 45px; /* Add top margin if necessary */
+}
+
+/* Logo styles */
+.logo {
+  width: 120px;
+  height: 80px;
+  background-image: url('/public/logo.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+/* Container for centering */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text below logo in U shape */
+.logo-text {
+  display: flex;
+  justify-content: center;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  line-height: 1; /* Adjust line-height to prevent extra spacing */
+}
+
+.logo-text span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+
+/* Curve text into U shape */
+.logo-text span:nth-child(1) { transform: rotate(-40deg); }
+.logo-text span:nth-child(2) { transform: rotate(-30deg); }
+.logo-text span:nth-child(3) { transform: rotate(-20deg); }
+.logo-text span:nth-child(4) { transform: rotate(-10deg); }
+.logo-text span:nth-child(5) { transform: rotate(-5deg); }
+.logo-text span:nth-child(6) { transform: rotate(0deg); }
+.logo-text span:nth-child(7) { transform: rotate(5deg); }
+.logo-text span:nth-child(8) { transform: rotate(10deg); }
+.logo-text span:nth-child(9) { transform: rotate(20deg); }
+.logo-text span:nth-child(10) { transform: rotate(30deg); }
+.logo-text span:nth-child(11) { transform: rotate(40deg); }
+
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .nav-links li {
+  margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar nav ul li a:hover {
+  color: #6ba1ab; /* Pastel pistachio hover color */
+}
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 500px; /* Adjust the height as needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: filter 0.3s ease-in-out;
+}
+.hero-image{
+  width: 1500px;
+  filter: blur(1.1px); /* Adjust the value to control the blur effect */
+}
+.hero-section:hover {
+  filter: blur(0px); /* Remove blur when hovered for a nice effect */
+}
+
+.hero-content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  animation: slideInUp 1s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadeIn 1.5s ease-in-out;
+  color:rgb(6, 6, 12);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Traffic Data Section */
+.traffic-data-section {
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.traffic-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Base color */
+  color: black;
+  border: none;
+  width:220px;
+  height:40px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #45A049; /* Slightly darker shade for hover effect */
+}
+
+button:active {
+  background-color: #3e8e41; /* Even darker shade for active state */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.6);
+}
+
+.detection-result {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  color: #333;
+}
+
+.detection-result h4 {
+  margin-bottom: 5px;
+  color: #4CAF50; /* Match button color */
+}
+
+/* Features Section */
+.features-section {
+  padding: 30px;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  width: 200px;
+  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+/* ViolatorsDashboard styling */
+.violator-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.violator-table th,
+.violator-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border: 1px solid #020000;
+}
+
+.violator-table th {
+  background-color: #b8d6f0;
+}
+
+
+
+/* Footer */
+.footer {
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
